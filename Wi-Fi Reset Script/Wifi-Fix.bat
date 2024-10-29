@@ -4,6 +4,7 @@ Mode con lines=25 cols=85
 chcp 65001 >nul
 Color 47
 
+:: main menu for this script
 :menu
 cls
 call :Logo
@@ -19,6 +20,7 @@ if "%answer%"=="2" goto 2
 goto:menu
 exit /b
 
+:: option one
 :1
 ipconfig /release 
 ipconfig /flushdns 
@@ -36,6 +38,7 @@ echo Please try to connect to wifi again (make sure connect automatically is unc
 pause
 goto :menu
 
+:: option two
 :2
 Del C:\Windows\wlansvc\Policies\PolE6F5.tmp
 Rd C:\Windows\wlansvc\Policies
